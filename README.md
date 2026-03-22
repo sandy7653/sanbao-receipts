@@ -1,62 +1,79 @@
 # Sanbao Receipts
 
-Sanbao Receipts 是一个面向 The Synthesis 的 agent identity + receipt demo。
+Sanbao Receipts 是一个面向 The Synthesis 的 agent identity + execution receipt demo。
 
-它展示三件事：
+它解决的问题很直接：
 
-- agent 具备可辨认身份
-- agent 的每次任务执行都生成可审计回执
-- 人类可以直接查看任务、动作、结果与关联钱包地址
+- autonomous agent 做了什么
+- 这次动作依据什么权限执行
+- 结果是什么
+- 人类如何快速审查
 
-## Why
+这个项目把 agent 行为展示成结构化 receipts，作为更强链上验证、delegation 控制、payment rails、ERC-8004 identity 与 onchain attestations 的前端入口。
 
-当前很多 agent 系统能执行动作，但难以回答这几个问题：
+## 项目目标
 
-- 这次动作是谁执行的
-- 它为什么能执行
-- 它到底做了什么
-- 执行结果是否可核对
+Sanbao Receipts 不是单纯的 landing page，而是一个 submission core：
 
-Sanbao Receipts 用一个最小可运行前端，把这些信息组织成清晰的 receipt timeline，便于后续接 ERC-8004、delegation、payment rails 或链上 attestations。
+- 有清晰的问题陈述
+- 有可展示的前端界面
+- 有 receipt timeline
+- 有赛道映射
+- 有后续扩展到链上验证的空间
 
-## Demo Features
+## 当前功能
 
 - Agent profile card
 - Wallet ownership display
 - Receipt timeline
+- Receipt category filter
 - Status tags for verified / pending / failed actions
-- Problem statement and track-oriented framing for The Synthesis
+- Problem statement, architecture, and hackathon track framing
 
-## Local Run
+## 为什么适合 The Synthesis
+
+The Synthesis 关注 agent trust、agent identity、trusted actions、autonomous execution。
+
+Sanbao Receipts 与这些方向直接对齐，因为它把本来分散在日志、命令行、钱包状态里的信息，整理成可读、可查、可解释的 receipts。
+
+## 对齐赛道
+
+当前设计重点对齐这些赛道：
+
+- Synthesis Open Track
+- Agents With Receipts — ERC-8004
+- Let the Agent Cook — No Humans Required
+- Agent Services on Base
+- Private Agents, Trusted Actions
+
+## 本地运行
 
 直接用浏览器打开 `index.html` 即可。
 
-也可以在本地起静态服务，例如：
+也可以起一个静态服务：
 
 ```bash
 python -m http.server 8000
 ```
 
-然后访问 `http://localhost:8000`。
+然后访问：
 
-## Project Structure
+`http://localhost:8000`
 
-- `index.html`：演示页
+## 文件结构
+
+- `index.html`：页面结构
 - `styles.css`：样式
-- `app.js`：前端数据与渲染逻辑
+- `app.js`：演示数据、筛选逻辑、渲染逻辑
 
-## Wallet
-
-Demo owner wallet:
+## Demo 钱包地址
 
 `0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F`
 
-## Hackathon Fit
+## 后续可扩展方向
 
-This project is designed to fit tracks around:
-
-- Synthesis Open Track
-- ERC-8004 / trusted agent receipts
-- autonomous agent execution
-- agent identity and accountability
-- onchain or verifiable action trails
+- ERC-8004 identity resolution
+- delegation policy 展示
+- receipt hash 上链
+- JSON export
+- submission publishing flow tracking

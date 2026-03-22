@@ -10,18 +10,34 @@
     <main class="page">
       <section class="hero card">
         <div>
-          <p class="eyebrow">The Synthesis Demo</p>
+          <p class="eyebrow">The Synthesis Submission Demo</p>
           <h1>Sanbao Receipts</h1>
           <p class="lede">
-            A lightweight agent identity and execution receipt interface for transparent,
-            auditable autonomous actions.
+            A transparent execution surface for autonomous agents: identity, authority,
+            receipts, and wallet-linked accountability in one place.
           </p>
         </div>
         <div class="hero-meta">
           <span class="pill">Agent Identity</span>
           <span class="pill">Receipts</span>
-          <span class="pill">Audit Trail</span>
+          <span class="pill">Authority Trail</span>
+          <span class="pill">Wallet Accountability</span>
         </div>
+      </section>
+
+      <section class="grid three stats-row">
+        <article class="card stat-card">
+          <p class="stat-label">Receipts</p>
+          <p id="stat-receipts" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <p class="stat-label">Verified</p>
+          <p id="stat-verified" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <p class="stat-label">Pending</p>
+          <p id="stat-pending" class="stat-value">0</p>
+        </article>
       </section>
 
       <section class="grid two">
@@ -31,22 +47,51 @@
         </article>
 
         <article class="card">
-          <h2>Problem</h2>
+          <h2>Problem Statement</h2>
           <p>
-            Agents can act, but users still lack a simple way to inspect who acted, what was
-            executed, whether the action was authorized, and what outcome was produced.
+            Autonomous agents can already register, coordinate, call tools, and move through
+            execution flows. What is still missing is a compact verification layer that lets a
+            human inspect who acted, what authority they used, what happened, and whether the
+            result can be trusted.
           </p>
           <p>
-            Sanbao Receipts turns agent actions into structured receipts that can later map to
-            ERC-8004 identity, delegated permissions, payment flows, and onchain attestations.
+            Sanbao Receipts turns agent execution into structured receipts. Each receipt is tied
+            to an identity, a wallet context, an action category, a result, and an audit status.
+            That makes the system easier to review, debug, and extend toward onchain proofs.
           </p>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Core Flow</h2>
+          <ol class="steps">
+            <li>Register or resolve agent identity</li>
+            <li>Attach wallet owner context</li>
+            <li>Execute an autonomous action</li>
+            <li>Generate a human-readable receipt</li>
+            <li>Review status, output, and verification trail</li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h2>Architecture</h2>
+          <ul>
+            <li>Identity layer for agent profile and future ERC-8004 mapping</li>
+            <li>Execution layer for actions such as registration, transfers, and publishing</li>
+            <li>Receipt layer for normalized action results and statuses</li>
+            <li>Review layer for human-facing audit and debugging</li>
+          </ul>
         </article>
       </section>
 
       <section class="card">
         <div class="section-head">
-          <h2>Execution Receipts</h2>
-          <p>Human-readable receipts for autonomous actions.</p>
+          <div>
+            <h2>Execution Receipts</h2>
+            <p>Human-readable receipts for autonomous actions.</p>
+          </div>
+          <div id="receipt-filters" class="hero-meta"></div>
         </div>
         <div id="receipt-list" class="receipt-list"></div>
       </section>
@@ -59,18 +104,35 @@
             <li>Give humans a compact verification surface</li>
             <li>Prepare for wallet-linked and onchain accountability</li>
             <li>Make autonomous systems easier to trust and debug</li>
+            <li>Provide a reusable UX layer for future agent-native tooling</li>
           </ul>
         </article>
 
         <article class="card">
           <h2>Track fit</h2>
+          <div id="track-list" class="track-list"></div>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Next extensions</h2>
           <ul>
-            <li>Synthesis Open Track</li>
-            <li>Agents With Receipts — ERC-8004</li>
-            <li>Let the Agent Cook — No Humans Required</li>
-            <li>Agent Services on Base</li>
-            <li>Private Agents, Trusted Actions</li>
+            <li>ERC-8004 identity resolution and verification</li>
+            <li>Delegation policies and spend scopes</li>
+            <li>Onchain attestation of receipt hashes</li>
+            <li>Exportable JSON receipts for downstream tooling</li>
+            <li>Project publishing and submission proof timeline</li>
           </ul>
+        </article>
+
+        <article class="card">
+          <h2>Submission Positioning</h2>
+          <p>
+            This project is intentionally scoped as a clear submission core: small enough to demo,
+            but broad enough to support multiple tracks centered on trusted agent execution,
+            autonomous coordination, receipts, and verifiable accountability.
+          </p>
         </article>
       </section>
     </main>

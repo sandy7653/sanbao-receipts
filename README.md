@@ -1,28 +1,28 @@
 # Sanbao Receipts
 
-Sanbao Receipts 是一个面向 The Synthesis 的 agent identity + execution receipt demo。
+Sanbao Receipts is an agent identity and execution receipt demo built for The Synthesis.
 
-它解决的问题很直接：
+It focuses on four basic questions:
 
-- autonomous agent 做了什么
-- 这次动作依据什么权限执行
-- 结果是什么
-- 人类如何快速审查
+- what an autonomous agent actually did
+- what authority the action relied on
+- what result was produced
+- how a human can review it quickly
 
-这个项目把 agent 行为展示成结构化 receipts，作为更强链上验证、delegation 控制、payment rails、ERC-8004 identity 与 onchain attestations 的前端入口。
+The project turns agent activity into structured receipts and presents them as a compact review surface. It is designed as a frontend entry point for stronger onchain verification, delegation controls, payment rails, ERC-8004 identity, and future attestations.
 
-## 项目目标
+## Project Goal
 
-Sanbao Receipts 不是单纯的 landing page，而是一个 submission core：
+Sanbao Receipts is not just a landing page. It is a lightweight submission core with:
 
-- 有清晰的问题陈述
-- 有可展示的前端界面
-- 有 receipt timeline
-- 有真实 proof links
-- 有赛道映射
-- 有后续扩展到链上验证的空间
+- a clear problem statement
+- a working public interface
+- a receipt timeline
+- real proof links
+- track mapping
+- room for stronger onchain extensions
 
-## 当前功能
+## Current Features
 
 - Agent profile card
 - Wallet ownership display
@@ -32,43 +32,43 @@ Sanbao Receipts 不是单纯的 landing page，而是一个 submission core：
 - Real proof section
 - Problem statement and architecture framing
 
-## 真实证明
+## Real Proofs
 
-- 注册交易：<https://basescan.org/tx/0x583b7b63fa3fc83eaf54b5a786837c67b41383a154b51c28815cab68a5ce94ef>
-- self-custody 转移交易：<https://basescan.org/tx/0x4337e880fc18973a308422449d7ed41a12342a30adb51185911f012f3696540b>
-- 仓库：<https://github.com/sandy7653/sanbao-receipts>
-- 在线 demo：<https://sandy7653.github.io/sanbao-receipts/>
-- 视频：<https://raw.githubusercontent.com/sandy7653/sanbao-receipts/main/sanbao-demo.mp4>
+- Registration transaction: <https://basescan.org/tx/0x583b7b63fa3fc83eaf54b5a786837c67b41383a154b51c28815cab68a5ce94ef>
+- Self-custody transfer transaction: <https://basescan.org/tx/0x4337e880fc18973a308422449d7ed41a12342a30adb51185911f012f3696540b>
+- Repository: <https://github.com/sandy7653/sanbao-receipts>
+- Live demo: <https://sandy7653.github.io/sanbao-receipts/>
+- Video: <https://raw.githubusercontent.com/sandy7653/sanbao-receipts/main/sanbao-demo.mp4>
 
-## 为什么适合 The Synthesis
+## Why it fits The Synthesis
 
-The Synthesis 关注 agent trust、agent identity、trusted actions、autonomous execution。
+The Synthesis is focused on agent trust, identity, trusted actions, and autonomous execution.
 
-Sanbao Receipts 与这些方向对齐，因为它把分散在日志、钱包状态、提交状态里的信息，整理成可读、可查、可解释的 receipts 和 proof links。
+Sanbao Receipts fits that direction because it turns scattered evidence from logs, wallet state, and submission state into readable receipts and proof links.
 
-## 对齐赛道
+## Target Tracks
 
-当前设计重点对齐这些赛道：
+The current version is positioned toward:
 
 - Synthesis Open Track
 - Agents With Receipts — ERC-8004
 - Let the Agent Cook — No Humans Required
 - Agent Services on Base
 
-## 文件结构
+## File Structure
 
-- `index.html`：页面结构
-- `styles.css`：样式
-- `app.js`：演示数据、筛选逻辑、渲染逻辑
-- `agent.json`：agent capability manifest
-- `agent_log.json`：结构化执行日志
-- `cover.svg`：提交封面图
-- `sanbao-demo.mp4`：演示视频
+- `index.html`: page structure
+- `styles.css`: styling
+- `app.js`: demo data, filtering logic, rendering logic
+- `agent.json`: agent capability manifest
+- `agent_log.json`: structured execution log
+- `cover.svg`: submission cover asset
+- `sanbao-demo.mp4`: demo video
 
-## Demo 钱包地址
+## Demo Wallet
 
 `0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F`
 
-## 当前判断
+## Current Assessment
 
-这个项目的功能体量仍然偏轻，但它已经具备真实的注册、钱包绑定、项目发布、公开仓库、在线 demo、视频与链上 proof，可以作为一个真实可验证的 submission 存在。
+This is still a lightweight project, but it already includes real registration, wallet binding, project publication, a public repository, a live demo, a video, and onchain proof links. That makes it a real and verifiable submission rather than a purely conceptual one.

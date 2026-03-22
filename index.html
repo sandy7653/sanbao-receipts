@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanbao Receipts</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">The Synthesis Demo</p>
+          <h1>Sanbao Receipts</h1>
+          <p class="lede">
+            A lightweight agent identity and execution receipt interface for transparent,
+            auditable autonomous actions.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span class="pill">Agent Identity</span>
+          <span class="pill">Receipts</span>
+          <span class="pill">Audit Trail</span>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Agent</h2>
+          <div id="agent-card"></div>
+        </article>
+
+        <article class="card">
+          <h2>Problem</h2>
+          <p>
+            Agents can act, but users still lack a simple way to inspect who acted, what was
+            executed, whether the action was authorized, and what outcome was produced.
+          </p>
+          <p>
+            Sanbao Receipts turns agent actions into structured receipts that can later map to
+            ERC-8004 identity, delegated permissions, payment flows, and onchain attestations.
+          </p>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Execution Receipts</h2>
+          <p>Human-readable receipts for autonomous actions.</p>
+        </div>
+        <div id="receipt-list" class="receipt-list"></div>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Why it matters</h2>
+          <ul>
+            <li>Reduce ambiguity in agent execution</li>
+            <li>Give humans a compact verification surface</li>
+            <li>Prepare for wallet-linked and onchain accountability</li>
+            <li>Make autonomous systems easier to trust and debug</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Track fit</h2>
+          <ul>
+            <li>Synthesis Open Track</li>
+            <li>Agents With Receipts — ERC-8004</li>
+            <li>Let the Agent Cook — No Humans Required</li>
+            <li>Agent Services on Base</li>
+            <li>Private Agents, Trusted Actions</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,11 +1,39 @@
 const agent = {
   name: "sanbao",
-  identity: "ERC-8004-ready agent identity",
+  identity: "ERC-8004 registered participant",
   ownerWallet: "0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F",
   harness: "OpenClaw",
   model: "gpt-5.4",
   focus: ["identity", "receipts", "trusted actions", "wallet accountability"]
 };
+
+const proofs = [
+  {
+    label: "Registration transaction",
+    value: "BaseScan",
+    url: "https://basescan.org/tx/0x583b7b63fa3fc83eaf54b5a786837c67b41383a154b51c28815cab68a5ce94ef"
+  },
+  {
+    label: "Self-custody transfer transaction",
+    value: "BaseScan",
+    url: "https://basescan.org/tx/0x4337e880fc18973a308422449d7ed41a12342a30adb51185911f012f3696540b"
+  },
+  {
+    label: "Live demo",
+    value: "GitHub Pages",
+    url: "https://sandy7653.github.io/sanbao-receipts/"
+  },
+  {
+    label: "Published repository",
+    value: "GitHub",
+    url: "https://github.com/sandy7653/sanbao-receipts"
+  },
+  {
+    label: "Demo video",
+    value: "MP4",
+    url: "https://raw.githubusercontent.com/sandy7653/sanbao-receipts/main/sanbao-demo.mp4"
+  }
+];
 
 const tracks = [
   {
@@ -23,10 +51,6 @@ const tracks = [
   {
     name: "Agent Services on Base",
     reason: "Can evolve into a discoverable agent service that emits structured receipts for each action."
-  },
-  {
-    name: "Private Agents, Trusted Actions",
-    reason: "Centers trust, execution auditability, and authority visibility rather than opaque outcomes."
   }
 ];
 
@@ -38,7 +62,8 @@ const receipts = [
     at: "2026-03-23 03:06 GMT+8",
     summary: "Initialized registration, completed email verification, and created a persistent participant identity.",
     output: "Agent registration completed successfully.",
-    authority: "registered participant flow"
+    authority: "registered participant flow",
+    proof: "0x583b7b63fa3fc83eaf54b5a786837c67b41383a154b51c28815cab68a5ce94ef"
   },
   {
     title: "Record owner wallet target",
@@ -47,7 +72,18 @@ const receipts = [
     at: "2026-03-23 03:08 GMT+8",
     summary: "Stored the designated wallet address for downstream self-custody transfer and publication flow.",
     output: "Target wallet recorded for future transfer.",
-    authority: "user-specified owner wallet"
+    authority: "user-specified owner wallet",
+    proof: "0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F"
+  },
+  {
+    title: "Complete self-custody transfer",
+    status: "verified",
+    category: "wallet",
+    at: "2026-03-23 04:28 GMT+8",
+    summary: "Transferred the registered participant to the designated owner wallet and confirmed self-custody.",
+    output: "custodyType = self_custody",
+    authority: "participant transfer confirm flow",
+    proof: "0x4337e880fc18973a308422449d7ed41a12342a30adb51185911f012f3696540b"
   },
   {
     title: "Create public repository",
@@ -56,25 +92,28 @@ const receipts = [
     at: "2026-03-23 03:20 GMT+8",
     summary: "Created a public GitHub repository and prepared the initial demo files for submission use.",
     output: "Repository scaffolding completed.",
-    authority: "GitHub CLI authenticated session"
+    authority: "GitHub CLI authenticated session",
+    proof: "github.com/sandy7653/sanbao-receipts"
   },
   {
-    title: "Draft submission framing",
+    title: "Publish project submission",
     status: "verified",
     category: "submission",
-    at: "2026-03-23 04:20 GMT+8",
-    summary: "Mapped the project toward receipt-centric and trusted execution tracks using the published prize catalog.",
-    output: "Track shortlist prepared.",
-    authority: "public hackathon catalog analysis"
+    at: "2026-03-23 04:28 GMT+8",
+    summary: "Created the draft submission, assigned tracks, and published the project on The Synthesis.",
+    output: "status = publish",
+    authority: "project publish endpoint",
+    proof: "sanbao-receipts-8e24"
   },
   {
-    title: "Prepare self-custody transfer",
-    status: "pending",
-    category: "wallet",
-    at: "Next step",
-    summary: "The participant still needs to transfer the registered identity to the owner wallet before publishing.",
-    output: "Waiting for transfer init and confirm.",
-    authority: "participant wallet ownership requirement"
+    title: "Deploy public demo and video",
+    status: "verified",
+    category: "artifact",
+    at: "2026-03-23 04:56 GMT+8",
+    summary: "Enabled GitHub Pages, added submission artifacts, and generated a public MP4 walkthrough.",
+    output: "Live demo and video attached to submission.",
+    authority: "GitHub Pages and repository artifacts",
+    proof: "sandy7653.github.io/sanbao-receipts/"
   }
 ];
 
@@ -100,6 +139,20 @@ function renderStats() {
   document.querySelector("#stat-receipts").textContent = String(receipts.length);
   document.querySelector("#stat-verified").textContent = String(verified);
   document.querySelector("#stat-pending").textContent = String(pending);
+}
+
+function renderProofs() {
+  const node = document.querySelector("#proof-list");
+  node.innerHTML = proofs
+    .map(
+      (item) => `
+        <article class="track-item proof-item">
+          <h3>${item.label}</h3>
+          <p><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.value}</a></p>
+        </article>
+      `
+    )
+    .join("");
 }
 
 function renderTrackList() {
@@ -159,6 +212,7 @@ function renderReceipts() {
           <p class="receipt-body">${receipt.summary}</p>
           <p class="receipt-meta"><span class="label">Authority:</span> ${receipt.authority}</p>
           <p class="receipt-meta"><span class="label">Result:</span> ${receipt.output}</p>
+          <p class="receipt-meta"><span class="label">Proof:</span> <code>${receipt.proof}</code></p>
         </article>
       `
     )
@@ -167,6 +221,7 @@ function renderReceipts() {
 
 renderAgent();
 renderStats();
+renderProofs();
 renderTrackList();
 renderFilters();
 renderReceipts();

@@ -1,0 +1,20 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#08111F"/>
+  <rect x="40" y="40" width="1200" height="640" rx="28" fill="#101C2F" stroke="#274567" stroke-width="2"/>
+  <text x="90" y="150" fill="#72D0FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="4">THE SYNTHESIS SUBMISSION</text>
+  <text x="90" y="245" fill="#EEF5FF" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">Sanbao Receipts</text>
+  <text x="90" y="315" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="28">Agent identity, execution receipts, and wallet-linked accountability</text>
+  <rect x="90" y="380" width="300" height="170" rx="20" fill="#13233A" stroke="#274567"/>
+  <text x="120" y="430" fill="#EEF5FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Identity</text>
+  <text x="120" y="470" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">ERC-8004-ready profile</text>
+  <text x="120" y="505" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">Owner wallet context</text>
+  <rect x="430" y="380" width="300" height="170" rx="20" fill="#13233A" stroke="#274567"/>
+  <text x="460" y="430" fill="#EEF5FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Receipts</text>
+  <text x="460" y="470" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">Structured action history</text>
+  <text x="460" y="505" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">Verified and pending states</text>
+  <rect x="770" y="380" width="380" height="170" rx="20" fill="#13233A" stroke="#274567"/>
+  <text x="800" y="430" fill="#EEF5FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Review Surface</text>
+  <text x="800" y="470" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">Human-readable audit trail</text>
+  <text x="800" y="505" fill="#9AB0CA" font-family="Segoe UI, Arial, sans-serif" font-size="20">Ready for stronger onchain proofs</text>
+  <text x="90" y="620" fill="#72D0FF" font-family="Segoe UI, Arial, sans-serif" font-size="22">Open Track · ERC-8004 · Autonomous Execution</text>
+</svg>

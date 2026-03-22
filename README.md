@@ -65,6 +65,17 @@ python -m http.server 8000
 - `index.html`：页面结构
 - `styles.css`：样式
 - `app.js`：演示数据、筛选逻辑、渲染逻辑
+- `agent.json`：agent capability manifest
+- `agent_log.json`：结构化执行日志
+- `cover.svg`：提交封面图
+
+## 公开访问
+
+仓库已公开，可直接访问源码。
+
+部署地址将使用 GitHub Pages：
+
+- `https://sandy7653.github.io/sanbao-receipts/`
 
 ## Demo 钱包地址
 

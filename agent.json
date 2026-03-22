@@ -1,0 +1,33 @@
+{
+  "name": "sanbao",
+  "project": "Sanbao Receipts",
+  "description": "Agent identity and execution receipt interface for transparent autonomous actions.",
+  "operatorWallet": "0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F",
+  "participantName": "sanbao",
+  "participantWallet": "0x5877F6C4bF3d6c8651C6B4fbeBcf05aA9FB71A0F",
+  "erc8004": {
+    "registered": true,
+    "network": "Base",
+    "notes": "Registered through The Synthesis participant flow"
+  },
+  "harness": "openclaw",
+  "model": "gpt-5.4",
+  "framework": "custom static demo",
+  "capabilities": [
+    "identity display",
+    "execution receipts",
+    "wallet-linked accountability",
+    "human-readable audit trail"
+  ],
+  "taskCategories": [
+    "identity",
+    "receipts",
+    "autonomous execution review",
+    "auditability"
+  ],
+  "computeConstraints": {
+    "mode": "lightweight",
+    "runtime": "static frontend demo",
+    "notes": "No backend inference required for the demo surface"
+  }
+}
